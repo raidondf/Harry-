@@ -1,0 +1,43 @@
+/*
+codigo	preco
+101		1,00
+102		0,80
+105		1,20
+107		0,40
+*/
+
+int   codigo[4];
+float preco [] = {1.0, 0.8, 1.2, 0.4};
+int   pedido[10]; //para armaz. ate 10 pedidos. Obs: por codigo
+float total = 0;
+int contador = -1;
+
+void main(){
+	//Inicialização do arranjo CODIGO
+	codigo[0] = 101; 
+	codigo[1] = 102;
+	codigo[2] = 105;
+	codigo[3] = 107;
+	printf("\nMENU ");
+	printf("\nCodigo\tPreco\tProduto");
+	printf("\n%d\t%0.2f\tPao",		  codigo[0],preco[0]);
+	printf("\n%d\t%0.2f\tQueijo",	  codigo[1],preco[1]);
+	printf("\n%d\t%0.2f\tHamburguer", codigo[2],preco[2]);
+	printf("\n%d\t%0.2f\tMilho",	  codigo[3],preco[3]);
+	printf("\n\n");
+
+	do{
+		contador = contador + 1;
+		printf("\nCodigo do produto: ");
+		scanf("%d", &pedido[contador]);
+	
+		if(pedido[contador] == codigo[0]) total = total + preco[0];
+		if(pedido[contador] == codigo[1]) total = total + preco[1];	
+		if(pedido[contador] == codigo[2]) total = total + preco[2];	
+		if(pedido[contador] == codigo[3]) total = total + preco[3];	
+		
+	}while( pedido[contador] != 0 );
+	
+	printf("\nTOTAL DO PEDIDO: %0.2f", total);
+
+}
