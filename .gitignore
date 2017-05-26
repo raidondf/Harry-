@@ -41,3 +41,4 @@ void main(){
 	printf("\nTOTAL DO PEDIDO: %0.2f", total);
 
 }
+RAIDON > OBS: Fiz alteração no número do pedido do código.
